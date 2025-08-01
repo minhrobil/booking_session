@@ -1,0 +1,6 @@
+framework:
+    # serializer:
+    #     enable_attributes: true
+    #     enabled: true
+    #     mapping:
+    #         paths: ['%kernel.project_dir%/config/serialization']

@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "81a39daa-6bf1-46c8-843d-c6e15fdba5f5",
+		"name": "Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29214594"
+	},
+	"item": [
+		{
+			"name": "Search session",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/sessions?date=2025-07-31",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sessions"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2025-07-31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullName\": \"Alice Nguyen\",\n    \"email\": \"nguyenquangminh20111997@gmail.com\",\n    \"phoneNumber\": \"0981234567\",\n    \"acceptedTerms\": true,\n    \"bookings\": [\n        {\n            \"sessionTimeSlotId\": 8,\n            \"trainerId\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/bookings",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
